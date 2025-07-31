@@ -1,0 +1,92 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #c2e9fb, #a1c4fd);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: #333;
+}
+
+#weather-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Header */
+h1 {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #222;
+  margin: 10px
+}
+
+/* Input and button */
+#city-input {
+  width: 65%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #4a90e2;
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+#city-input:focus {
+  border-color: #357ae8;
+}
+
+#get-weather-btn {
+  padding: 0.75rem 1.2rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+#get-weather-btn:hover {
+  background-color: #357ae8;
+}
+
+/* Weather info */
+#weather-result p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+#weather-icon {
+  margin-top: 1rem;
+  width: 80px;
+  height: 80px;
+}
+
+/* Loading and error messages */
+#loading,
+#error-message {
+  margin: 1rem 0;
+  font-weight: 600;
+  color: #4a90e2;
+}
+
+#error-message {
+  color: #e74c3c;
+}

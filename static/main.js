@@ -3,7 +3,7 @@ const apikey = "AZ5P5AQMWTBHZN7WYPYJMRNWZ";
 const apiUrl= 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/New%20York?unitGroup=metric&key=AZ5P5AQMWTBHZN7WYPYJMRNWZ&contentType=json'
 
 function fetchWeatherData(location) {
-    const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=metric&key=${apikey}&contentType=json`;
+    const url = `/weather?city=${location}`;
     fetch(url) 
     .then(response => response.json())
     .then(data => {
@@ -37,6 +37,7 @@ function fetchWeatherData(location) {
         console.error('Error fetching weather data:', error);
     });   
 }
+
 
 const weatherButton = document.getElementById("get-weather-btn");
 weatherButton.addEventListener("click", () => {
